@@ -1,0 +1,9 @@
+Student ID: 24301101
+Name: Wang Jinghang
+Date: 2026-11-09
+
+Stage: no_std and no_main, without _start.
+file: 64-bit little-endian RISC-V ELF executable.
+rust-readobj -h: Entry is 0x0.
+rust-objdump -S: no disassembled instructions.
+Conclusion: a valid entry function is still missing.
