@@ -1,0 +1,5 @@
+# Student ID: 24301101
+# Name: Wang Jinghang
+# Date: 2026-11-09
+[build]
+target = "riscv64gc-unknown-none-elf"
