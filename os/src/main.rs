@@ -4,9 +4,9 @@
 #![no_std]
 #![no_main]
 mod console;
+mod lang_items;
 mod sbi;
 use core::arch::global_asm;
-use core::panic::PanicInfo;
 
 global_asm!(include_str!("entry.asm"));
 
@@ -28,10 +28,7 @@ fn clear_bss() {
 pub extern "C" fn rust_main() -> ! {
     clear_bss();
     crate::println!("Hello, world!");
-    loop {}
+    panic!("Shutdown machine!");
 }
 
-#[panic_handler]
-fn panic(_info: &PanicInfo) -> ! {
-    loop {}
-}
+
