@@ -10,14 +10,17 @@ SECTIONS
         *(.text.entry)
         *(.text .text.*)
     }
+    . = ALIGN(4096);
     .rodata : {
         *(.rodata .rodata.*)
         *(.srodata .srodata.*)
     }
+    . = ALIGN(4096);
     .data : {
         *(.data .data.*)
         *(.sdata .sdata.*)
     }
+    . = ALIGN(4096);
     .bss : {
         start_bss = .;
         *(.bss .bss.*)
